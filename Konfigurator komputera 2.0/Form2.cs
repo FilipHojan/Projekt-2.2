@@ -79,24 +79,16 @@ namespace Konfigurator_komputera_2._0
 
 
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if(Form2.procesor == 0 ^ Form2.ram == 0 ^ Form2.pamiec == 0 ^ Form2.kartagraficzna == 0 ^ Form2.system == 0)
-            {
-
-            }
-        }
-
-
         private void groupBox2_Enter(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
+
+
+
+
 
         private void radioButton6_CheckedChanged(object sender, EventArgs e)
         {
@@ -109,6 +101,15 @@ namespace Konfigurator_komputera_2._0
         }
 
         private void radioButton5_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
@@ -126,6 +127,48 @@ namespace Konfigurator_komputera_2._0
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+
+
+
+
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (Form2.procesor == 0 ^ Form2.ram == 0 ^ Form2.pamiec == 0 ^ Form2.kartagraficzna == 0 ^ Form2.system == 0)
+            {
+                label7.ForeColor = Color.Red;
+            }
+            else if (Form2.procesor != 0 ^ Form2.ram != 0 ^ Form2.pamiec != 0 ^ Form2.kartagraficzna != 0 ^ Form2.system == 0)
+            {
+                label7.ForeColor = Color.Orange;
+            }
+            else if (Form2.procesor != 0 ^ Form2.ram != 0 ^ Form2.pamiec != 0 ^ Form2.kartagraficzna == 0 ^ Form2.system != 0)
+            {
+                label7.ForeColor = Color.Orange;
+            }
+            else if (Form2.procesor != 0 ^ Form2.ram != 0 ^ Form2.pamiec == 0 ^ Form2.kartagraficzna != 0 ^ Form2.system != 0)
+            {
+                label7.ForeColor = Color.Orange;
+            }
+            else if (Form2.procesor != 0 ^ Form2.ram == 0 ^ Form2.pamiec != 0 ^ Form2.kartagraficzna != 0 ^ Form2.system != 0)
+            {
+                label7.ForeColor = Color.Orange;
+            }
+            else if (Form2.procesor == 0 ^ Form2.ram != 0 ^ Form2.pamiec != 0 ^ Form2.kartagraficzna != 0 ^ Form2.system != 0)
+            {
+                label7.ForeColor = Color.Orange;
+            }
+            else if (Form2.procesor != 0 ^ Form2.ram != 0 ^ Form2.pamiec != 0 ^ Form2.kartagraficzna != 0 ^ Form2.system != 0)
+            {
+                label7.ForeColor = Color.Green;
+            }
+
+            Form1.GlobalKomputer = Form2.procesor + Form2.ram + Form2.pamiec + Form2.kartagraficzna + Form2.system;
+            label7.Text = Form1.GlobalKomputer.ToString();
         }
     }
 }
