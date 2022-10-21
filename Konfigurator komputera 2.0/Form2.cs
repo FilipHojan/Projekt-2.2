@@ -22,6 +22,7 @@ namespace Konfigurator_komputera_2._0
         public Form2()
         {
             InitializeComponent();
+            timer1.Start();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -35,19 +36,19 @@ namespace Konfigurator_komputera_2._0
             {
                 Form2.procesor = 0;
             }
-            if (radioButton1.Checked == true && radioButton2.Checked == false && radioButton3.Checked == false && radioButton4.Checked == false)
+            else if (radioButton1.Checked == true && radioButton2.Checked == false && radioButton3.Checked == false && radioButton4.Checked == false)
             {
                 Form2.procesor = 500;
             }
-            if (radioButton1.Checked == false && radioButton2.Checked == true && radioButton3.Checked == false && radioButton4.Checked == false)
+            else if (radioButton1.Checked == false && radioButton2.Checked == true && radioButton3.Checked == false && radioButton4.Checked == false)
             {
                 Form2.procesor = 700;
             }
-            if (radioButton1.Checked == false && radioButton2.Checked == false && radioButton3.Checked == true && radioButton4.Checked == false)
+            else if (radioButton1.Checked == false && radioButton2.Checked == false && radioButton3.Checked == true && radioButton4.Checked == false)
             {
                 Form2.procesor = 1200;
             }
-            if (radioButton1.Checked == false && radioButton2.Checked == false && radioButton3.Checked == false && radioButton4.Checked == true)
+            else if (radioButton1.Checked == false && radioButton2.Checked == false && radioButton3.Checked == false && radioButton4.Checked == true)
             {
                 Form2.procesor = 1700;
             }
@@ -91,15 +92,15 @@ namespace Konfigurator_komputera_2._0
             {
                 Form2.ram = 0;
             }
-            if (radioButton5.Checked == true && radioButton6.Checked == false && radioButton7.Checked == false)
+            else if (radioButton5.Checked == true && radioButton6.Checked == false && radioButton7.Checked == false)
             {
                 Form2.ram = 500;
             }
-            if (radioButton5.Checked == false && radioButton6.Checked == true && radioButton7.Checked == false)
+            else if (radioButton5.Checked == false && radioButton6.Checked == true && radioButton7.Checked == false)
             {
                 Form2.ram = 1000;
             }
-            if (radioButton5.Checked == false && radioButton6.Checked == false && radioButton7.Checked == true)
+            else if (radioButton5.Checked == false && radioButton6.Checked == false && radioButton7.Checked == true)
             {
                 Form2.ram = 1500;
             }
@@ -225,6 +226,70 @@ namespace Konfigurator_komputera_2._0
 
 
 
+
+
+
+
+
+
+        private void groupBox3_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void radioButton8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton9_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton10_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton11_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton12_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton13_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -285,6 +350,12 @@ namespace Konfigurator_komputera_2._0
 
             Form1.GlobalKomputer = Form2.procesor + Form2.ram + Form2.pamiec + Form2.kartagraficzna + Form2.system;
             label7.Text = Form1.GlobalKomputer.ToString();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var myForm1 = new Form1();
+            myForm1.Show();
         }
 
     }

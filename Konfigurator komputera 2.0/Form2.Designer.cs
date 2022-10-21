@@ -343,6 +343,7 @@ namespace Konfigurator_komputera_2._0
             this.groupBox3.Size = new System.Drawing.Size(120, 176);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // radioButton13
             // 
@@ -354,6 +355,7 @@ namespace Konfigurator_komputera_2._0
             this.radioButton13.TabStop = true;
             this.radioButton13.Text = "RTX 3070";
             this.radioButton13.UseVisualStyleBackColor = true;
+            this.radioButton13.CheckedChanged += new System.EventHandler(this.radioButton13_CheckedChanged);
             // 
             // radioButton12
             // 
@@ -365,6 +367,7 @@ namespace Konfigurator_komputera_2._0
             this.radioButton12.TabStop = true;
             this.radioButton12.Text = "RTX 3060";
             this.radioButton12.UseVisualStyleBackColor = true;
+            this.radioButton12.CheckedChanged += new System.EventHandler(this.radioButton12_CheckedChanged);
             // 
             // radioButton11
             // 
@@ -376,6 +379,7 @@ namespace Konfigurator_komputera_2._0
             this.radioButton11.TabStop = true;
             this.radioButton11.Text = "1670 Ti GTX";
             this.radioButton11.UseVisualStyleBackColor = true;
+            this.radioButton11.CheckedChanged += new System.EventHandler(this.radioButton11_CheckedChanged);
             // 
             // radioButton10
             // 
@@ -387,6 +391,7 @@ namespace Konfigurator_komputera_2._0
             this.radioButton10.TabStop = true;
             this.radioButton10.Text = "1660 GTX";
             this.radioButton10.UseVisualStyleBackColor = true;
+            this.radioButton10.CheckedChanged += new System.EventHandler(this.radioButton10_CheckedChanged);
             // 
             // radioButton9
             // 
@@ -398,6 +403,7 @@ namespace Konfigurator_komputera_2._0
             this.radioButton9.TabStop = true;
             this.radioButton9.Text = "1080 GTX";
             this.radioButton9.UseVisualStyleBackColor = true;
+            this.radioButton9.CheckedChanged += new System.EventHandler(this.radioButton9_CheckedChanged);
             // 
             // radioButton8
             // 
@@ -409,6 +415,7 @@ namespace Konfigurator_komputera_2._0
             this.radioButton8.TabStop = true;
             this.radioButton8.Text = "1060 GTX";
             this.radioButton8.UseVisualStyleBackColor = true;
+            this.radioButton8.CheckedChanged += new System.EventHandler(this.radioButton8_CheckedChanged);
             // 
             // comboBox1
             // 
@@ -432,6 +439,7 @@ namespace Konfigurator_komputera_2._0
             this.button1.TabIndex = 18;
             this.button1.Text = "Powrót";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form2
             // 
