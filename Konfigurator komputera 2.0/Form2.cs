@@ -79,14 +79,31 @@ namespace Konfigurator_komputera_2._0
 
 
 
+
+
+
+
+
+
         private void groupBox2_Enter(object sender, EventArgs e)
         {
-
+            if(radioButton5.Checked == false && radioButton6.Checked == false && radioButton7.Checked == false)
+            {
+                Form2.ram = 0;
+            }
+            if (radioButton5.Checked == true && radioButton6.Checked == false && radioButton7.Checked == false)
+            {
+                Form2.ram = 500;
+            }
+            if (radioButton5.Checked == false && radioButton6.Checked == true && radioButton7.Checked == false)
+            {
+                Form2.ram = 1000;
+            }
+            if (radioButton5.Checked == false && radioButton6.Checked == false && radioButton7.Checked == true)
+            {
+                Form2.ram = 1500;
+            }
         }
-
-
-
-
 
 
 
@@ -104,6 +121,105 @@ namespace Konfigurator_komputera_2._0
         {
 
         }
+
+
+
+
+
+
+
+
+
+
+
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                Form2.pamiec += 1000;
+            }
+            if (checkBox1.Checked == false)
+            {
+                Form2.pamiec -= 1000;
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                Form2.pamiec += 1500;
+            }
+            if (checkBox2.Checked == false)
+            {
+                Form2.pamiec -= 1500;
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true)
+            {
+                Form2.pamiec += 2500;
+            }
+            if (checkBox3.Checked == false)
+            {
+                Form2.pamiec -= 2500;
+            }
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox4.Checked == true)
+            {
+                Form2.pamiec += 500;
+            }
+            if (checkBox4.Checked == false)
+            {
+                Form2.pamiec -= 500;
+            }
+        }
+
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked == true)
+            {
+                Form2.pamiec += 1000;
+            }
+            if (checkBox5.Checked == false)
+            {
+                Form2.pamiec -= 1000;
+            }
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox6.Checked == true)
+            {
+                Form2.pamiec += 2000;
+            }
+            if (checkBox6.Checked == false)
+            {
+                Form2.pamiec -= 2000;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -170,5 +286,6 @@ namespace Konfigurator_komputera_2._0
             Form1.GlobalKomputer = Form2.procesor + Form2.ram + Form2.pamiec + Form2.kartagraficzna + Form2.system;
             label7.Text = Form1.GlobalKomputer.ToString();
         }
+
     }
 }
